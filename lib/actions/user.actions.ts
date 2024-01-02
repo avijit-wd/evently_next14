@@ -11,6 +11,7 @@ import Order from "../database/models/order.model";
 
 export async function createUser(user: CreateUserParams) {
   try {
+    console.log("create user called");
     await connectToDatabase();
 
     const newUser = await User.create(user);
